@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encriptador de texto</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1 class="titulo">código secreto</h1>
+
+  <main class="main">
+    
+    <form id="formulario"  onclick="evitarRecarga(event)">
+      <section class="form box">
+        <label for="input-texto">Solo letras minúsculas, sin acento</label>
+        <input class="text-input" type="text" name="input-texto" id="input-texto" placeholder="Ingrese el texto aqui">
+        <input class="btn" type="submit" onclick="encriptar();" value="encriptar!" id="btn-encriptar">
+        <input class="btn" type="submit" onclick="desencriptar()" value="desencriptar!" id="btn-desencriptar">
+        
+      </form>
+    </section>
+  
+    <section class="msg box">
+      <h2 id="">Mensaje encriptado:</h2>
+      <input class="text-input-d" type="text" id="msg"></input>
+      <input class="btn" type="submit"  value="copiar" onclick="copiar()" id="btn-copy">
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+<footer class="footer"> Copyright Ivándlf <br>Challenge Alura</footer>
+</html>
