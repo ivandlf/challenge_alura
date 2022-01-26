@@ -9,16 +9,18 @@ body {
   background-size: 50rem;
   background-position: center;
   margin: 0;
-  padding: 10px;
+  padding: 0;
   height: 100%;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .main {
-  width: 80vw;
-  margin: auto;
+  width: 100%;
+  margin: 10px;
   display: flex;
   justify-content: center;
+  flex-direction: row;
+  flex-basis: auto;
 }
 
 .titulo {
@@ -39,6 +41,7 @@ body {
   border-radius: 0.5em;
   width: 30vw;
   height: auto;
+  flex-wrap: wrap-reverse;
 }
 
 .btn {
@@ -78,7 +81,24 @@ body {
   background-color: black;
   font-style: italic;
   color: white;
-  padding: 10px;
   font-display: 10px;
   text-align: center;
+}
+
+@media (max-width: 600px) {
+  .main {
+    flex-direction: column;
+    width: 300px;
+    align-content: stretch;
+    flex-basis: content;
+    margin: 20px;
+    justify-content: space-around;
+  }
+  .box {
+    width: 400px;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin-top: 10px;
+    flex-basis: 100%;
+  }
 }
